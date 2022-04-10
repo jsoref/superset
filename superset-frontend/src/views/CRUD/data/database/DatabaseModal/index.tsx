@@ -847,7 +847,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
 
   const renderModalFooter = () => {
     if (db) {
-      // if db show back + connenct
+      // if db show back + connect
       if (!hasConnectedDb || editNewDb) {
         return (
           <>
