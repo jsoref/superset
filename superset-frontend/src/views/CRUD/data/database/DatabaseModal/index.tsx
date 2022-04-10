@@ -295,17 +295,17 @@ function dbReducer(
         const catalogToUpdate = trimmedState?.catalog[idx] || {};
         catalogToUpdate[action.payload.name] = action.payload.value;
 
-        const paramatersCatalog = {};
+        const parametersCatalog = {};
         // eslint-disable-next-line array-callback-return
         trimmedState.catalog?.map((item: CatalogObject) => {
-          paramatersCatalog[item.name] = item.value;
+          parametersCatalog[item.name] = item.value;
         });
 
         return {
           ...trimmedState,
           parameters: {
             ...trimmedState.parameters,
-            catalog: paramatersCatalog,
+            catalog: parametersCatalog,
           },
         };
       }
