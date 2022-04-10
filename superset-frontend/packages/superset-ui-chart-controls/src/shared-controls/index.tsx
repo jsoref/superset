@@ -44,7 +44,7 @@ import {
   SequentialScheme,
   legacyValidateInteger,
   validateNonEmpty,
-  ComparisionType,
+  ComparisonType,
 } from '@superset-ui/core';
 
 import {
@@ -457,7 +457,7 @@ const y_axis_format: SharedControlConfig<'SelectControl', SelectDefaultOption> =
       option.label.includes(search) || option.value.includes(search),
     mapStateToProps: state => {
       const isPercentage =
-        state.controls?.comparison_type?.value === ComparisionType.Percentage;
+        state.controls?.comparison_type?.value === ComparisonType.Percentage;
       return {
         choices: isPercentage
           ? D3_FORMAT_OPTIONS.filter(option => option[0].includes('%'))
