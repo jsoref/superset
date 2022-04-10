@@ -54,7 +54,7 @@ def check_datasource_access(f: Callable[..., Any]) -> Callable[..., Any]:
             database, Table(table_name_parsed, schema_name_parsed)
         ):
             self.stats_logger.incr(
-                f"permisssion_denied_{self.__class__.__name__}.select_star"
+                f"permission_denied_{self.__class__.__name__}.select_star"
             )
             logger.warning(
                 "Permission denied for user %s on table: %s schema: %s",
