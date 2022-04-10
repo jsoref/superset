@@ -169,7 +169,7 @@ const ExplorePanelContainer = styled.div`
       padding: ${theme.gridUnit * 2}px;
       width: ${theme.gridUnit * 8}px;
     }
-    .callpase-icon > svg {
+    .collapse-icon > svg {
       color: ${theme.colors.primary.base};
     }
   `};
