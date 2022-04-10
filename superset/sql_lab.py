@@ -581,7 +581,7 @@ def cancel_query(query: Query, user_name: Optional[str] = None) -> bool:
     """
     Cancel a running query.
 
-    Note some engines implicitly handle the cancelation of a query and thus no expliicit
+    Note some engines implicitly handle the cancelation of a query and thus no explicit
     action is required.
 
     :param query: Query to cancel
