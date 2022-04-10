@@ -4905,7 +4905,7 @@
         ],
         "type": "object"
       },
-      "DistincResponseSchema": {
+      "DistinctResponseSchema": {
         "properties": {
           "count": {
             "description": "The total number of distinct values",
@@ -14293,7 +14293,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DistincResponseSchema"
+                  "$ref": "#/components/schemas/DistinctResponseSchema"
                 }
               }
             },
@@ -15803,7 +15803,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DistincResponseSchema"
+                  "$ref": "#/components/schemas/DistinctResponseSchema"
                 }
               }
             },
@@ -17063,7 +17063,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DistincResponseSchema"
+                  "$ref": "#/components/schemas/DistinctResponseSchema"
                 }
               }
             },

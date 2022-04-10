@@ -66,7 +66,7 @@ class DistinctResultResponseSchema(Schema):
     text = fields.String(description="The distinct item")
 
 
-class DistincResponseSchema(Schema):
+class DistinctResponseSchema(Schema):
     count = fields.Integer(description="The total number of distinct values")
     result = fields.List(fields.Nested(DistinctResultResponseSchema))
 
@@ -253,7 +253,7 @@ class BaseSupersetModelRestApi(ModelRestApi):
             Type[Schema], ...
         ] = self.openapi_spec_component_schemas + (
             RelatedResponseSchema,
-            DistincResponseSchema,
+            DistinctResponseSchema,
         )
 
     def create_blueprint(
@@ -564,7 +564,7 @@ class BaseSupersetModelRestApi(ModelRestApi):
                 application/json:
                   schema:
                   schema:
-                    $ref: "#/components/schemas/DistincResponseSchema"
+                    $ref: "#/components/schemas/DistinctResponseSchema"
             400:
               $ref: '#/components/responses/400'
             401:
