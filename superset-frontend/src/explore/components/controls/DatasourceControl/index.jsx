@@ -136,7 +136,7 @@ class DatasourceControl extends React.PureComponent {
       datasource.type === 'table' &&
       !columns.find(({ column_name }) => column_name === timeCol)?.is_dttm
     ) {
-      // set `granularity_sqla` to first datatime column name or null
+      // set `granularity_sqla` to first datetime column name or null
       this.props.actions.setControlValue(
         'granularity_sqla',
         firstDttmCol ? firstDttmCol.column_name : null,
