@@ -290,7 +290,7 @@ class TestExportDashboardsCommand(SupersetTestCase):
     @pytest.mark.usefixtures("load_world_bank_dashboard_with_slices")
     @patch("superset.dashboards.commands.export.suffix")
     def test_append_charts(self, mock_suffix):
-        """Test that oprhaned charts are added to the dashbaord position"""
+        """Test that oprhaned charts are added to the dashboard position"""
         # return deterministic IDs
         mock_suffix.side_effect = (str(i) for i in itertools.count(1))
 
