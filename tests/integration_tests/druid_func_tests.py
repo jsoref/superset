@@ -650,7 +650,7 @@ class TestDruidFunc(SupersetTestCase):
             "function": function,
         }
         postagg = get_post_agg(conf)
-        self.assertTrue(isinstance(postagg, models.JavascriptPostAggregator))
+        self.assertTrue(isinstance(postagg, models.JavaScriptPostAggregator))
         self.assertEqual(postagg.name, "postagg_name")
         self.assertEqual(postagg.post_aggregator["type"], "javascript")
         self.assertEqual(postagg.post_aggregator["fieldNames"], ["field1", "field2"])
