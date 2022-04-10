@@ -321,7 +321,7 @@ def menu_data() -> Dict[str, Any]:
             "text": brand_text,
         },
         "navbar_right": {
-            # show the watermark if the default app icon has been overriden
+            # show the watermark if the default app icon has been overridden
             "show_watermark": ("superset-logo-horiz" not in appbuilder.app_icon),
             "bug_report_url": appbuilder.app.config["BUG_REPORT_URL"],
             "documentation_url": appbuilder.app.config["DOCUMENTATION_URL"],

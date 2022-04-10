@@ -125,7 +125,7 @@ export default class ColorSchemeControl extends React.PureComponent {
     if (hasCustomLabelColors || dashboardId) {
       const alertTitle = hasCustomLabelColors
         ? t(
-            `This color scheme is being overriden by custom label colors.
+            `This color scheme is being overridden by custom label colors.
               Check the JSON metadata in the Advanced settings`,
           )
         : this.dashboardColorSchemeAlert;
