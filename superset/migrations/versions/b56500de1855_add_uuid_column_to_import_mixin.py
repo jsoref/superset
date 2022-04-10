@@ -105,7 +105,7 @@ def add_uuids(model, table_name, session, batch_size=default_batch_size):
             print(f"Done. Assigned {count} uuids in {time.time() - start_time:.3f}s.")
             return
 
-    # Othwewise Use Python uuid function
+    # Otherwise Use Python uuid function
     start = 0
     while start < count:
         end = min(start + batch_size, count)
