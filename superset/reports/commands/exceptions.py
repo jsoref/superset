@@ -222,8 +222,8 @@ class ReportScheduleNotificationError(CommandException):
     message = _("Alert on grace period")
 
 
-class ReportScheduleSelleniumUserNotFoundError(CommandException):
-    message = _("Report Schedule sellenium user not found")
+class ReportScheduleSeleniumUserNotFoundError(CommandException):
+    message = _("Report Schedule selenium user not found")
 
 
 class ReportScheduleStateNotFoundError(CommandException):
