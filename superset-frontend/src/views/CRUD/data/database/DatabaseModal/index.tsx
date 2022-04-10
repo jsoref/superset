@@ -1486,7 +1486,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
         </>
       ) : (
         <>
-          {/* Dyanmic Form Step 1 */}
+          {/* Dynamic Form Step 1 */}
           {!isLoading &&
             (!db ? (
               <SelectDatabaseStyles>
