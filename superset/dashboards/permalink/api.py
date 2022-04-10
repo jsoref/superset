@@ -129,11 +129,11 @@ class DashboardPermalinkRestApi(BaseApi):
         log_to_statsd=False,
     )
     def get(self, key: str) -> Response:
-        """Retrives permanent link state for dashboard.
+        """Retrieves permanent link state for dashboard.
         ---
         get:
           description: >-
-            Retrives dashboard state associated with a permanent link.
+            Retrieves dashboard state associated with a permanent link.
           parameters:
           - in: path
             schema:

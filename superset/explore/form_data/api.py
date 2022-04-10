@@ -212,11 +212,11 @@ class ExploreFormDataRestApi(BaseApi, ABC):
         log_to_statsd=False,
     )
     def get(self, key: str) -> Response:
-        """Retrives a form_data.
+        """Retrieves a form_data.
         ---
         get:
           description: >-
-            Retrives a form_data.
+            Retrieves a form_data.
           parameters:
           - in: path
             schema:

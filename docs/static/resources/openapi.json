@@ -11721,7 +11721,7 @@
     },
     "/api/v1/dashboard/permalink/{key}": {
       "get": {
-        "description": "Retrives dashboard state associated with a permanent link.",
+        "description": "Retrieves dashboard state associated with a permanent link.",
         "parameters": [
           {
             "in": "path",
@@ -12554,7 +12554,7 @@
         ]
       },
       "get": {
-        "description": "Retrives a value.",
+        "description": "Retrieves a value.",
         "parameters": [
           {
             "in": "path",
@@ -15075,7 +15075,7 @@
         ]
       },
       "get": {
-        "description": "Retrives a form_data.",
+        "description": "Retrieves a form_data.",
         "parameters": [
           {
             "in": "path",
@@ -15259,7 +15259,7 @@
     },
     "/api/v1/explore/permalink/{key}": {
       "get": {
-        "description": "Retrives chart state associated with a permanent link.",
+        "description": "Retrieves chart state associated with a permanent link.",
         "parameters": [
           {
             "in": "path",
