@@ -39,7 +39,7 @@ const TAB_HEIGHT = 140;
 
 /*
     editorQueries are queries executed by users passed from SqlEditor component
-    dataPrebiewQueries are all queries executed for preview of table data (from SqlEditorLeft)
+    dataPreviewQueries are all queries executed for preview of table data (from SqlEditorLeft)
 */
 interface SouthPanePropTypes {
   editorQueries: any[];
