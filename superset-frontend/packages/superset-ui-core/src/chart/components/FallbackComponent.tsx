@@ -39,7 +39,7 @@ export default function FallbackComponent({
     <div style={{ ...CONTAINER_STYLE, height, width }}>
       <div>
         <div>
-          <b>Oops! An error occured!</b>
+          <b>Oops! An error occurred!</b>
         </div>
         <code>{error ? error.toString() : 'Unknown Error'}</code>
       </div>
