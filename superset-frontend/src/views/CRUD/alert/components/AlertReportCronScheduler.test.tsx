@@ -27,7 +27,7 @@ import { AlertReportCronScheduler } from './AlertReportCronScheduler';
 describe('AlertReportCronScheduler', () => {
   let wrapper: ReactWrapper;
 
-  it('calls onChnage when value chnages', () => {
+  it('calls onChange when value changes', () => {
     const onChangeMock = jest.fn();
     wrapper = mount(
       <AlertReportCronScheduler value="* * * * *" onChange={onChangeMock} />,
