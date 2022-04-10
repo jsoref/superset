@@ -620,7 +620,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     }
 
     if (dbToUpdate?.parameters?.catalog) {
-      // need to stringify gsheets catalog to allow it to be seralized
+      // need to stringify gsheets catalog to allow it to be serialized
       dbToUpdate.extra_json = {
         engine_params: JSON.stringify({
           catalog: dbToUpdate.parameters.catalog,
