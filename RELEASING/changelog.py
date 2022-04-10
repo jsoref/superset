@@ -24,9 +24,9 @@ import click
 from click.core import Context
 
 try:
-    from github import BadCredentialsException, Github, PullRequest, Repository
+    from github import BadCredentialsException, GitHub, PullRequest, Repository
 except ModuleNotFoundError:
-    print("PyGithub is a required package for this script")
+    print("PyGitHub is a required package for this script")
     exit(1)
 
 SUPERSET_REPO = "apache/superset"
@@ -78,7 +78,7 @@ class GitChangeLog:
         self._github_prs: Dict[int, Any] = {}
         self._wait = 10
         github_token = access_token or os.environ.get("GITHUB_TOKEN")
-        self._github = Github(github_token)
+        self._github = GitHub(github_token)
         self._show_risk = risk
         self._superset_repo: Repository = None
 
