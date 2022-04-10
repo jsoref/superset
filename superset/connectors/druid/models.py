@@ -263,7 +263,7 @@ class DruidCluster(Model, AuditMixinNullable, ImportExportMixin):
             datasource.merge_flag = merge_flag
         session.flush()
 
-        # Prepare multithreaded executation
+        # Prepare multithreaded execution
         pool = ThreadPool()
         ds_refresh = list(ds_map.values())
         metadata = pool.map(_fetch_metadata_for, ds_refresh)
