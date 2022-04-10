@@ -20,7 +20,7 @@ from typing import cast, Optional
 from flask_appbuilder.models.sqla import Model
 from flask_appbuilder.security.sqla.models import User
 
-from superset.common.not_authrized_object import NotAuthorizedException
+from superset.common.not_authorized_object import NotAuthorizedException
 from superset.common.request_contexed_based import is_user_admin
 from superset.dashboards.commands.exceptions import DashboardNotFoundError
 from superset.dashboards.dao import DashboardDAO
