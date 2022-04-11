@@ -120,7 +120,7 @@ builtin_time_grains: Dict[Optional[str], str] = {
 class TimestampExpression(ColumnClause):  # pylint: disable=abstract-method
     def __init__(self, expr: str, col: ColumnClause, **kwargs: Any) -> None:
         """Sqlalchemy class that can be can be used to render native column elements
-        respeting engine-specific quoting rules as part of a string-based expression.
+        respecting engine-specific quoting rules as part of a string-based expression.
 
         :param expr: Sql expression with '{col}' denoting the locations where the col
         object will be rendered.
