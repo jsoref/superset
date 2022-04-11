@@ -111,7 +111,7 @@ logger = logging.getLogger(__name__)
 
 try:
     # Postaggregator might not have been imported.
-    class JavascriptPostAggregator(Postaggregator):
+    class JavaScriptPostAggregator(Postaggregator):
         def __init__(self, name: str, field_names: List[str], function: str) -> None:
             self.post_aggregator = {
                 "type": "javascript",
@@ -263,7 +263,7 @@ class DruidCluster(Model, AuditMixinNullable, ImportExportMixin):
             datasource.merge_flag = merge_flag
         session.flush()
 
-        # Prepare multithreaded executation
+        # Prepare multithreaded execution
         pool = ThreadPool()
         ds_refresh = list(ds_map.values())
         metadata = pool.map(_fetch_metadata_for, ds_refresh)
@@ -823,7 +823,7 @@ class DruidDatasource(Model, BaseDatasource):
         kind of post aggregation for pydruid.
         """
         if mconf.get("type") == "javascript":
-            return JavascriptPostAggregator(
+            return JavaScriptPostAggregator(
                 name=mconf.get("name", ""),
                 field_names=mconf.get("fieldNames", []),
                 function=mconf.get("function", ""),

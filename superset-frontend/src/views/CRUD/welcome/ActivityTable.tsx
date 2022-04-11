@@ -64,7 +64,7 @@ export enum SetTabType {
   EXAMPLE = 'Examples',
 }
 /**
- * Recent activity objects fetched by `getRecentAcitivtyObjs`.
+ * Recent activity objects fetched by `getRecentActivityObjs`.
  */
 type ActivityObject =
   | RecentSlice

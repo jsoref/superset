@@ -122,7 +122,7 @@ class TabbedSqlEditors extends React.PureComponent {
     }
 
     // merge post form data with GET search params
-    // Hack: this data should be comming from getInitialState
+    // Hack: this data should be coming from getInitialState
     // but for some reason this data isn't being passed properly through
     // the reducer.
     const appContainer = document.getElementById('app');

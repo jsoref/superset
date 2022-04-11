@@ -38,7 +38,7 @@ def literal_dttm_type_factory(
     :param db_engine_spec: Database engine spec which supports `convert_dttm` method
     :param col_type: native column type as defined in table metadata
     :param db_extra: The database extra object
-    :return: SQLAlchemy type that supports using datetima as literal bind
+    :return: SQLAlchemy type that supports using datetime as literal bind
     """
     # pylint: disable=too-few-public-methods
     class TemporalWrapperType(type(sqla_type)):  # type: ignore

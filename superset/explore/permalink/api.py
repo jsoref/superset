@@ -88,7 +88,7 @@ class ExplorePermalinkRestApi(BaseApi):
                         description: The key to retrieve the permanent link data.
                       url:
                         type: string
-                        description: pemanent link.
+                        description: permanent link.
             400:
               $ref: '#/components/responses/400'
             401:
@@ -123,11 +123,11 @@ class ExplorePermalinkRestApi(BaseApi):
         log_to_statsd=False,
     )
     def get(self, key: str) -> Response:
-        """Retrives permanent link state for chart.
+        """Retrieves permanent link state for chart.
         ---
         get:
           description: >-
-            Retrives chart state associated with a permanent link.
+            Retrieves chart state associated with a permanent link.
           parameters:
           - in: path
             schema:

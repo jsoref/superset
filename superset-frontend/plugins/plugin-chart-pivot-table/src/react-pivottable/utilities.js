@@ -177,7 +177,7 @@ const getSort = function (sorters, attr) {
   return naturalSort;
 };
 
-// aggregator templates default to US number formatting but this is overrideable
+// aggregator templates default to US number formatting but this is overridable
 const usFmt = numberFormat();
 const usFmtInt = numberFormat({ digitsAfterDecimal: 0 });
 const usFmtPct = numberFormat({

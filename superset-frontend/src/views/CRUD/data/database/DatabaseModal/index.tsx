@@ -295,17 +295,17 @@ function dbReducer(
         const catalogToUpdate = trimmedState?.catalog[idx] || {};
         catalogToUpdate[action.payload.name] = action.payload.value;
 
-        const paramatersCatalog = {};
+        const parametersCatalog = {};
         // eslint-disable-next-line array-callback-return
         trimmedState.catalog?.map((item: CatalogObject) => {
-          paramatersCatalog[item.name] = item.value;
+          parametersCatalog[item.name] = item.value;
         });
 
         return {
           ...trimmedState,
           parameters: {
             ...trimmedState.parameters,
-            catalog: paramatersCatalog,
+            catalog: parametersCatalog,
           },
         };
       }
@@ -620,7 +620,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
     }
 
     if (dbToUpdate?.parameters?.catalog) {
-      // need to stringify gsheets catalog to allow it to be seralized
+      // need to stringify gsheets catalog to allow it to be serialized
       dbToUpdate.extra_json = {
         engine_params: JSON.stringify({
           catalog: dbToUpdate.parameters.catalog,
@@ -847,7 +847,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
 
   const renderModalFooter = () => {
     if (db) {
-      // if db show back + connenct
+      // if db show back + connect
       if (!hasConnectedDb || editNewDb) {
         return (
           <>
@@ -1486,7 +1486,7 @@ const DatabaseModal: FunctionComponent<DatabaseModalProps> = ({
         </>
       ) : (
         <>
-          {/* Dyanmic Form Step 1 */}
+          {/* Dynamic Form Step 1 */}
           {!isLoading &&
             (!db ? (
               <SelectDatabaseStyles>

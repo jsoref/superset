@@ -17,7 +17,7 @@
  * under the License.
  */
 import React from 'react';
-import { t, RollingType, ComparisionType } from '@superset-ui/core';
+import { t, RollingType, ComparisonType } from '@superset-ui/core';
 import { ControlPanelSectionConfig } from '../types';
 import { formatSelectOptions } from '../utils';
 
@@ -123,10 +123,10 @@ export const advancedAnalyticsControls: ControlPanelSectionConfig = {
           label: t('Calculation type'),
           default: 'values',
           choices: [
-            [ComparisionType.Values, 'Actual values'],
-            [ComparisionType.Difference, 'Difference'],
-            [ComparisionType.Percentage, 'Percentage change'],
-            [ComparisionType.Ratio, 'Ratio'],
+            [ComparisonType.Values, 'Actual values'],
+            [ComparisonType.Difference, 'Difference'],
+            [ComparisonType.Percentage, 'Percentage change'],
+            [ComparisonType.Ratio, 'Ratio'],
           ],
           description: t(
             'How to display time shifts: as individual lines; as the ' +

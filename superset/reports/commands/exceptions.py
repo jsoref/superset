@@ -73,7 +73,7 @@ class ReportScheduleRequiredTypeValidationError(ValidationError):
 
 class ReportScheduleChartOrDashboardValidationError(ValidationError):
     """
-    Marshmallow validation error for report schedule accept exlusive chart or dashboard
+    Marshmallow validation error for report schedule accept exclusive chart or dashboard
     """
 
     def __init__(self) -> None:
@@ -222,8 +222,8 @@ class ReportScheduleNotificationError(CommandException):
     message = _("Alert on grace period")
 
 
-class ReportScheduleSelleniumUserNotFoundError(CommandException):
-    message = _("Report Schedule sellenium user not found")
+class ReportScheduleSeleniumUserNotFoundError(CommandException):
+    message = _("Report Schedule selenium user not found")
 
 
 class ReportScheduleStateNotFoundError(CommandException):

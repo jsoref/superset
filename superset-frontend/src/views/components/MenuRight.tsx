@@ -28,7 +28,7 @@ import LanguagePicker from './LanguagePicker';
 import DatabaseModal from '../CRUD/data/database/DatabaseModal';
 import { uploadUserPerms } from '../CRUD/utils';
 import {
-  ExtentionConfigs,
+  ExtensionConfigs,
   GlobalMenuDataOptions,
   RightMenuProps,
 } from './types';
@@ -78,7 +78,7 @@ const RightMenu = ({
     EXCEL_EXTENSIONS,
     ALLOWED_EXTENSIONS,
     HAS_GSHEETS_INSTALLED,
-  } = useSelector<any, ExtentionConfigs>(state => state.common.conf);
+  } = useSelector<any, ExtensionConfigs>(state => state.common.conf);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [engine, setEngine] = useState<string>('');
   const canSql = findPermission('can_sqllab', 'Superset', roles);
@@ -100,7 +100,7 @@ const RightMenu = ({
     {
       label: t('Data'),
       icon: 'fa-database',
-      childs: [
+      children: [
         {
           label: t('Connect database'),
           name: GlobalMenuDataOptions.DB_CONNECTION,
@@ -192,14 +192,14 @@ const RightMenu = ({
             icon={<Icons.TriangleDown />}
           >
             {dropdownItems.map(menu => {
-              if (menu.childs) {
+              if (menu.children) {
                 return canDatabase || canUpload ? (
                   <SubMenu
                     key={`sub2_${menu.label}`}
                     className="data-menu"
                     title={menuIconAndLabel(menu)}
                   >
-                    {menu.childs.map((item, idx) =>
+                    {menu.children.map((item, idx) =>
                       typeof item !== 'string' && item.name && item.perm ? (
                         <Fragment key={item.name}>
                           {idx === 2 && <Menu.Divider />}
@@ -242,7 +242,7 @@ const RightMenu = ({
         >
           {settings.map((section, index) => [
             <Menu.ItemGroup key={`${section.label}`} title={section.label}>
-              {section.childs?.map(child => {
+              {section.children?.map(child => {
                 if (typeof child !== 'string') {
                   return (
                     <Menu.Item key={`${child.label}`}>

@@ -525,7 +525,7 @@
       "CacheInvalidationRequestSchema": {
         "properties": {
           "datasource_uids": {
-            "description": "The uid of the dataset/datasource this new chart will use. A complete datasource identification needs `datasouce_uid` ",
+            "description": "The uid of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_uid` ",
             "items": {
               "type": "string"
             },
@@ -710,7 +710,7 @@
             "type": "array"
           },
           "metrics": {
-            "description": "Aggregate expressions. Metrics can be passed as both references to datasource metrics (strings), or ad-hoc metricswhich are defined only within the query object. See `ChartDataAdhocMetricSchema` for the structure of ad-hoc metrics. When metrics is undefined or null, the query is executed without a groupby. However, when metrics is an array (length >= 0), a groupby clause is added to the query.",
+            "description": "Aggregate expressions. Metrics can be passed as both references to datasource metrics (strings), or ad-hoc metrics which are defined only within the query object. See `ChartDataAdhocMetricSchema` for the structure of ad-hoc metrics. When metrics is undefined or null, the query is executed without a groupby. However, when metrics is an array (length >= 0), a groupby clause is added to the query.",
             "items": {},
             "nullable": true,
             "type": "array"
@@ -1262,7 +1262,7 @@
             "type": "boolean"
           },
           "metrics": {
-            "description": "Aggregate expressions. Metrics can be passed as both references to datasource metrics (strings), or ad-hoc metricswhich are defined only within the query object. See `ChartDataAdhocMetricSchema` for the structure of ad-hoc metrics.",
+            "description": "Aggregate expressions. Metrics can be passed as both references to datasource metrics (strings), or ad-hoc metrics which are defined only within the query object. See `ChartDataAdhocMetricSchema` for the structure of ad-hoc metrics.",
             "items": {},
             "nullable": true,
             "type": "array"
@@ -1348,7 +1348,7 @@
             "type": "string"
           },
           "time_shift": {
-            "description": "A human-readable date/time string. Please refer to [parsdatetime](https://github.com/bear/parsedatetime) documentation for details on valid values.",
+            "description": "A human-readable date/time string. Please refer to [parsedatetime](https://github.com/bear/parsedatetime) documentation for details on valid values.",
             "nullable": true,
             "type": "string"
           },
@@ -1829,7 +1829,7 @@
             "type": "array"
           },
           "datasource_id": {
-            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasouce_id` and `datasource_type`.",
+            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.",
             "format": "int32",
             "type": "integer"
           },
@@ -1879,7 +1879,7 @@
             "type": "string"
           },
           "query_context_generation": {
-            "description": "The query context generation represents whether the query_contextis user generated or not so that it does not update user modfiedstate.",
+            "description": "The query context generation represents whether the query_contexts user generated or not so that it does not update user modifiedstate.",
             "nullable": true,
             "type": "boolean"
           },
@@ -1936,7 +1936,7 @@
             "type": "array"
           },
           "datasource_id": {
-            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasouce_id` and `datasource_type`.",
+            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.",
             "format": "int32",
             "nullable": true,
             "type": "integer"
@@ -1983,7 +1983,7 @@
             "type": "string"
           },
           "query_context_generation": {
-            "description": "The query context generation represents whether the query_contextis user generated or not so that it does not update user modfiedstate.",
+            "description": "The query context generation represents whether the query_contexts user generated or not so that it does not update user modifiedstate.",
             "nullable": true,
             "type": "boolean"
           },
@@ -2578,7 +2578,7 @@
             "type": "array"
           },
           "datasource_id": {
-            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasouce_id` and `datasource_type`.",
+            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.",
             "format": "int32",
             "type": "integer"
           },
@@ -2628,7 +2628,7 @@
             "type": "string"
           },
           "query_context_generation": {
-            "description": "The query context generation represents whether the query_contextis user generated or not so that it does not update user modfiedstate.",
+            "description": "The query context generation represents whether the query_contexts user generated or not so that it does not update user modifiedstate.",
             "nullable": true,
             "type": "boolean"
           },
@@ -2685,7 +2685,7 @@
             "type": "array"
           },
           "datasource_id": {
-            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasouce_id` and `datasource_type`.",
+            "description": "The id of the dataset/datasource this new chart will use. A complete datasource identification needs `datasource_id` and `datasource_type`.",
             "format": "int32",
             "nullable": true,
             "type": "integer"
@@ -2732,7 +2732,7 @@
             "type": "string"
           },
           "query_context_generation": {
-            "description": "The query context generation represents whether the query_contextis user generated or not so that it does not update user modfiedstate.",
+            "description": "The query context generation represents whether the query_contexts user generated or not so that it does not update user modifiedstate.",
             "nullable": true,
             "type": "boolean"
           },
@@ -4905,7 +4905,7 @@
         ],
         "type": "object"
       },
-      "DistincResponseSchema": {
+      "DistinctResponseSchema": {
         "properties": {
           "count": {
             "description": "The total number of distinct values",
@@ -6848,7 +6848,7 @@
             "type": "string"
           },
           "working_timeout": {
-            "description": "If an alert is staled at a working state, how long until it's state is reseted to error",
+            "description": "If an alert is staled at a working state, how long until its state is reset to error",
             "example": 3600,
             "format": "int32",
             "minimum": 1,
@@ -7573,7 +7573,7 @@
             "type": "string"
           },
           "working_timeout": {
-            "description": "If an alert is staled at a working state, how long until it's state is reseted to error",
+            "description": "If an alert is staled at a working state, how long until its state is reset to error",
             "example": 3600,
             "format": "int32",
             "minimum": 1,
@@ -11721,7 +11721,7 @@
     },
     "/api/v1/dashboard/permalink/{key}": {
       "get": {
-        "description": "Retrives dashboard state associated with a permanent link.",
+        "description": "Retrieves dashboard state associated with a permanent link.",
         "parameters": [
           {
             "in": "path",
@@ -12554,7 +12554,7 @@
         ]
       },
       "get": {
-        "description": "Retrives a value.",
+        "description": "Retrieves a value.",
         "parameters": [
           {
             "in": "path",
@@ -14293,7 +14293,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DistincResponseSchema"
+                  "$ref": "#/components/schemas/DistinctResponseSchema"
                 }
               }
             },
@@ -15075,7 +15075,7 @@
         ]
       },
       "get": {
-        "description": "Retrives a form_data.",
+        "description": "Retrieves a form_data.",
         "parameters": [
           {
             "in": "path",
@@ -15224,7 +15224,7 @@
                       "type": "string"
                     },
                     "url": {
-                      "description": "pemanent link.",
+                      "description": "permanent link.",
                       "type": "string"
                     }
                   },
@@ -15259,7 +15259,7 @@
     },
     "/api/v1/explore/permalink/{key}": {
       "get": {
-        "description": "Retrives chart state associated with a permanent link.",
+        "description": "Retrieves chart state associated with a permanent link.",
         "parameters": [
           {
             "in": "path",
@@ -15618,7 +15618,7 @@
                       "description": "Menu items in a forest like data structure",
                       "items": {
                         "properties": {
-                          "childs": {
+                          "children": {
                             "items": {
                               "type": "object"
                             },
@@ -15803,7 +15803,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DistincResponseSchema"
+                  "$ref": "#/components/schemas/DistinctResponseSchema"
                 }
               }
             },
@@ -17063,7 +17063,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DistincResponseSchema"
+                  "$ref": "#/components/schemas/DistinctResponseSchema"
                 }
               }
             },

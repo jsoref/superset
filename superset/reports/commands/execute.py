@@ -52,7 +52,7 @@ from superset.reports.commands.exceptions import (
     ReportSchedulePreviousWorkingError,
     ReportScheduleScreenshotFailedError,
     ReportScheduleScreenshotTimeout,
-    ReportScheduleSelleniumUserNotFoundError,
+    ReportScheduleSeleniumUserNotFoundError,
     ReportScheduleStateNotFoundError,
     ReportScheduleUnexpectedError,
     ReportScheduleWorkingTimeoutError,
@@ -186,7 +186,7 @@ class BaseReportState:
             .one_or_none()
         )
         if not user:
-            raise ReportScheduleSelleniumUserNotFoundError()
+            raise ReportScheduleSeleniumUserNotFoundError()
         return user
 
     def _get_screenshots(self) -> List[bytes]:

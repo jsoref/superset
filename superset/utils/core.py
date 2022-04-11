@@ -128,7 +128,7 @@ DTTM_ALIAS = "__timestamp"
 
 NO_TIME_RANGE = "No filter"
 
-TIME_COMPARISION = "__"
+TIME_COMPARISON = "__"
 
 JS_MAX_INTEGER = 9007199254740991  # Largest int Java Script can handle 2^53-1
 
@@ -332,7 +332,7 @@ class TemporalType(str, Enum):
 
 class ColumnTypeSource(Enum):
     GET_TABLE = 1
-    CURSOR_DESCRIPION = 2
+    CURSOR_DESCRIPTION = 2
 
 
 class ColumnSpec(NamedTuple):
@@ -1566,7 +1566,7 @@ def get_column_name_from_metric(metric: Metric) -> Optional[str]:
 
 def get_column_names_from_metrics(metrics: List[Metric]) -> List[str]:
     """
-    Extract the columns that a list of metrics are referencing. Expcludes all
+    Extract the columns that a list of metrics are referencing. Excludes all
     SQL metrics.
 
     :param metrics: Ad-hoc metric

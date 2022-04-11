@@ -88,7 +88,7 @@ query_context_description = (
 )
 query_context_generation_description = (
     "The query context generation represents whether the query_context"
-    "is user generated or not so that it does not update user modfied"
+    "is user generated or not so that it does not update user modified"
     "state."
 )
 cache_timeout_description = (
@@ -98,12 +98,12 @@ cache_timeout_description = (
 )
 datasource_id_description = (
     "The id of the dataset/datasource this new chart will use. "
-    "A complete datasource identification needs `datasouce_id` "
+    "A complete datasource identification needs `datasource_id` "
     "and `datasource_type`."
 )
 datasource_uid_description = (
     "The uid of the dataset/datasource this new chart will use. "
-    "A complete datasource identification needs `datasouce_uid` "
+    "A complete datasource identification needs `datasource_uid` "
 )
 datasource_type_description = (
     "The type of dataset/datasource identified on `datasource_id`."
@@ -433,7 +433,7 @@ class ChartDataRollingOptionsSchema(ChartDataPostProcessingOperationOptionsSchem
         example=7,
     )
     rolling_type_options = fields.Dict(
-        desctiption="Optional options to pass to rolling method. Needed for "
+        description="Optional options to pass to rolling method. Needed for "
         "e.g. quantile operation.",
         example={},
     )
@@ -549,7 +549,7 @@ class ChartDataProphetOptionsSchema(ChartDataPostProcessingOperationOptionsSchem
         required=True,
     )
     periods = fields.Integer(
-        descrption="Time periods (in units of `time_grain`) to predict into the future",
+        description="Time periods (in units of `time_grain`) to predict into the future",
         min=0,
         example=7,
         required=True,
@@ -922,7 +922,7 @@ class AnnotationLayerSchema(Schema):
     )
     overrides = fields.Dict(
         keys=fields.String(
-            desciption="Name of property to be overridden",
+            description="Name of property to be overridden",
             validate=validate.OneOf(
                 choices=("granularity", "time_grain_sqla", "time_range", "time_shift"),
             ),
@@ -1078,7 +1078,7 @@ class ChartDataQueryObjectSchema(Schema):
     )
     time_shift = fields.String(
         description="A human-readable date/time string. "
-        "Please refer to [parsdatetime](https://github.com/bear/parsedatetime) "
+        "Please refer to [parsedatetime](https://github.com/bear/parsedatetime) "
         "documentation for details on valid values.",
         allow_none=True,
     )
@@ -1302,7 +1302,7 @@ class ChartDataResponseResult(Schema):
         allow_none=False,
     )
     stacktrace = fields.String(
-        desciption="Stacktrace if there was an error",
+        description="Stacktrace if there was an error",
         allow_none=True,
     )
     rowcount = fields.Integer(
@@ -1321,10 +1321,10 @@ class ChartDataResponseResult(Schema):
         fields.Dict(), description="A list with rejected filters"
     )
     from_dttm = fields.Integer(
-        desciption="Start timestamp of time range", required=False, allow_none=True
+        description="Start timestamp of time range", required=False, allow_none=True
     )
     to_dttm = fields.Integer(
-        desciption="End timestamp of time range", required=False, allow_none=True
+        description="End timestamp of time range", required=False, allow_none=True
     )
 
 
@@ -1388,7 +1388,7 @@ CHART_SCHEMAS = (
     ChartDataResponseSchema,
     ChartDataAsyncResponseSchema,
     # TODO: These should optimally be included in the QueryContext schema as an `anyOf`
-    #  in ChartDataPostPricessingOperation.options, but since `anyOf` is not
+    #  in ChartDataPostProcessingOperation.options, but since `anyOf` is not
     #  by Marshmallow<3, this is not currently possible.
     ChartDataAdhocMetricSchema,
     ChartDataAggregateOptionsSchema,

@@ -280,7 +280,7 @@ function AnnotationList({
         annotation={currentAnnotation}
         show={annotationModalOpen}
         onAnnotationAdd={() => refreshData()}
-        annnotationLayerId={annotationLayerId}
+        annotationLayerId={annotationLayerId}
         onHide={() => setAnnotationModalOpen(false)}
       />
       {annotationCurrentlyDeleting && (

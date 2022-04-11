@@ -803,7 +803,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             )
         except SupersetException:
             datasource_id = None
-            # fallback unkonw datasource to table type
+            # fallback unknown datasource to table type
             datasource_type = SqlaTable.type
 
         datasource: Optional[BaseDatasource] = None
@@ -2085,7 +2085,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             raise SupersetGenericErrorException(
                 __(
                     "One or more required fields are missing in the request. Please try "
-                    "again, and if the problem persists conctact your administrator."
+                    "again, and if the problem persists contact your administrator."
                 ),
                 status=400,
             ) from ex

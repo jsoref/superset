@@ -121,7 +121,7 @@ describe('BigNumberWithTrendline', () => {
       expect(transformed.bigNumber).toStrictEqual(1.2345);
       expect(transformed.bigNumberFallback).not.toBeNull();
 
-      // should successfully formatTime by ganularity
+      // should successfully formatTime by granularity
       expect(transformed.formatTime(new Date('2020-01-01'))).toStrictEqual(
         '2020-01-01 00:00:00',
       );
