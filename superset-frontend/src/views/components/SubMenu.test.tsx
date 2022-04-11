@@ -46,7 +46,7 @@ const mockedProps = {
   dropDownLinks: [
     {
       label: 'test a upload',
-      childs: [
+      children: [
         {
           label: 'Upload Test',
           name: 'Upload Test',

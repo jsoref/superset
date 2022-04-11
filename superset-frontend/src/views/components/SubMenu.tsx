@@ -269,7 +269,7 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = props => {
                 popupOffset={[10, 20]}
                 className="dropdown-menu-links"
               >
-                {link.childs?.map(item => {
+                {link.children?.map(item => {
                   if (typeof item === 'object') {
                     return (
                       <DropdownMenu.Item key={item.label}>
