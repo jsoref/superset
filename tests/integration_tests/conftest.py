@@ -63,7 +63,7 @@ def setup_sample_data() -> Any:
     with app.app_context():
         engine = get_example_database().get_sqla_engine()
 
-        # drop sqlachemy tables
+        # drop sqlalchemy tables
 
         db.session.commit()
         from sqlalchemy.ext import declarative
